@@ -1,0 +1,65 @@
+---
+- description: 
+  buttons: submit,cancel
+  label: DB List
+  blueprint_id: 
+  dialog_tabs:
+  - description: DBs
+    display: edit
+    label: DBs
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: DB_List
+      display: edit
+      label: DB List
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: database
+        description: 
+        data_type: string
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: JRTEST
+        values:
+        - - JRTEST
+          - JRTEST
+        - - ReportServer$SQLEXPRESS
+          - ReportServer$SQLEXPRESS
+        - - ReportServer$SQLEXPRESSTempDB
+          - ReportServer$SQLEXPRESSTempDB
+        values_method: 
+        values_method_options: {}
+        options:
+          :sort_by: :description
+          :sort_order: :ascending
+        label: Database
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: true
+        show_refresh_button: false
+        load_values_on_init: 
+        read_only: false
+        auto_refresh: 
+        trigger_auto_refresh: 
+        visible: true
+        type: DialogFieldDropDownList
+        resource_action:
+          action: 
+          resource_type: DialogField
+          ae_namespace: Windows
+          ae_class: SQL
+          ae_instance: get_dbs
+          ae_message: 
+          ae_attributes: {}
